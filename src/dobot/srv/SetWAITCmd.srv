@@ -1,0 +1,5 @@
+uint32 timeout
+bool isQueued
+---
+int32 result
+uint64 queuedCmdIndex

@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="dobot" name="pandpr" type="PickAndPlac">
+   	</node>
+</launch>

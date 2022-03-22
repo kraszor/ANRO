@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="dobot" name="towerBuilder" type="TowerBuilder">
+		<param name="towerHeight" value="1"></param>
+   	</node>
+</launch>
