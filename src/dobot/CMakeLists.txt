@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   genmsg
   geometry_msgs
+  kdl_parser
 )
 
 ## System dependencies are found with CMake's conventions
@@ -312,3 +313,8 @@ add_dependencies(PickAndPlac dobot_gencpp)
 add_executable(TowerBuilder src/TowerBuilder.cpp)
 target_link_libraries(TowerBuilder ${catkin_LIBRARIES} DobotDll)
 add_dependencies(TowerBuilder dobot_gencpp)
+
+add_executable(KDL_ForwardKin2 src/KDL_ForwardKin2.cpp)
+target_link_libraries(KDL_ForwardKin2 ${catkin_LIBRARIES})
+#target_link_libraries(KDL_ForwardKin2 Eigen3::Eigen)
+target_link_libraries(KDL_ForwardKin2 orocos-kdl)
