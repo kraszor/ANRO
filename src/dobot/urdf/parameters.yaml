@@ -1,0 +1,44 @@
+base_link_size: 0.158 0.158 0.05 
+platform_size: 0.12 0.12 0.088
+arm1_size:
+    - 0.135
+    - 0.04
+arm2_size:
+    - 0.147
+    - 0.03
+gripper_size:
+    - 0.04
+    - 0.02
+platform_origins: 0 0 0.044
+arm1_origins: 0 0 0.0675
+arm2_origins: 0 0 0.0735
+gripper_origins: 0 0 0.02
+joint1_limits:
+    - -1.571
+    - 1.571
+joint1_velocity: 
+    - 320.0
+joint1_axis: 0 0 1
+effort: 100
+joint2_limits:
+    - 0.0
+    - 1.4835
+joint2_velocity: 
+    - 320.0
+joint2_axis: 0 1 0
+joint3_limits:
+    - -0.17453
+    - 1.658
+joint3_velocity: 
+    - 320.0
+joint3_axis: 0 1 0
+joint4_limits:
+    - -1.571
+    - 1.571
+joint4_velocity: 
+    - 480.0
+joint4_axis: 1 0 0
+joint1_origins: 0 0 0.025
+joint2_origins: 0 0 0.088
+joint3_origins: 0 0 0.135
+joint4_origins: 0 0 0.147
