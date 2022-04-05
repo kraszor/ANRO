@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named poseFollow
+
+# Build rule for target.
+poseFollow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 poseFollow
+.PHONY : poseFollow
+
+# fast build rule for target.
+poseFollow/fast:
+	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/build
+.PHONY : poseFollow/fast
+
+#=============================================================================
+# Target rules for targets named KDL_ForwardKin2
+
+# Build rule for target.
+KDL_ForwardKin2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KDL_ForwardKin2
+.PHONY : KDL_ForwardKin2
+
+# fast build rule for target.
+KDL_ForwardKin2/fast:
+	$(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/build
+.PHONY : KDL_ForwardKin2/fast
+
+#=============================================================================
 # Target rules for targets named TowerBuilder
 
 # Build rule for target.
@@ -1554,6 +1580,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... poseFollow"
+	@echo "... KDL_ForwardKin2"
 	@echo "... TowerBuilder"
 	@echo "... DobotClient_PTP"
 	@echo "... DobotClient_JOG"

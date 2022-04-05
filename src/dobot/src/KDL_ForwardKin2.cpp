@@ -13,7 +13,7 @@ using namespace KDL;
 
 
 
-KDL::JntArray jointpositions = JntArray(4);
+KDL::JntArray jointpositions = JntArray(5);
 
 
 void callback(const sensor_msgs::JointState::ConstPtr& msg) {
@@ -21,6 +21,7 @@ void callback(const sensor_msgs::JointState::ConstPtr& msg) {
     	jointpositions(1) = msg->position[1];
     	jointpositions(2) = msg->position[2];
     	jointpositions(3) = msg->position[3];
+	jointpositions(4) = msg->position[4];
 }
 
 int main( int argc, char** argv )
@@ -28,8 +29,9 @@ int main( int argc, char** argv )
     KDL::Chain chain;
     chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,0.0,0.113))));
     chain.addSegment(Segment(Joint(Joint::RotY),Frame(Rotation::EulerZYX(0.0,0.0,-(M_PI/2)),Vector(0.0,0.0,0.135))));
-    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Rotation::EulerZYX(0.0,(M_PI/2),0.0),Vector(0.0,-0.147,0.0))));
-    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,-0.04,0.0))));
+    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,-0.147,0.0))));
+    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Rotation::EulerZYX(0.0,(M_PI/2),0.0), Vector(0.03,-0.03,0.0))));
+    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0, 0.0, 0.09))));
 
     ChainFkSolverPos_recursive solver = ChainFkSolverPos_recursive(chain);
 

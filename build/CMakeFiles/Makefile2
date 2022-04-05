@@ -264,12 +264,12 @@ gtest/googlemock/preinstall: gtest/googlemock/gtest/preinstall
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=98 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=97,98 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
@@ -296,12 +296,12 @@ clean: gtest/googlemock/CMakeFiles/gmock_main.dir/clean
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=97 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
@@ -347,12 +347,12 @@ gtest/googlemock/gtest/preinstall:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=100 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=99 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
@@ -379,12 +379,12 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=99 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
@@ -408,6 +408,8 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory dobot
 
 # Convenience name for "all" pass in the directory.
+dobot/all: dobot/CMakeFiles/poseFollow.dir/all
+dobot/all: dobot/CMakeFiles/KDL_ForwardKin2.dir/all
 dobot/all: dobot/CMakeFiles/TowerBuilder.dir/all
 dobot/all: dobot/CMakeFiles/DobotClient_PTP.dir/all
 dobot/all: dobot/CMakeFiles/DobotClient_JOG.dir/all
@@ -418,6 +420,8 @@ dobot/all: dobot/CMakeFiles/dobot_generate_messages.dir/all
 .PHONY : dobot/all
 
 # Convenience name for "clean" pass in the directory.
+dobot/clean: dobot/CMakeFiles/poseFollow.dir/clean
+dobot/clean: dobot/CMakeFiles/KDL_ForwardKin2.dir/clean
 dobot/clean: dobot/CMakeFiles/TowerBuilder.dir/clean
 dobot/clean: dobot/CMakeFiles/DobotClient_PTP.dir/clean
 dobot/clean: dobot/CMakeFiles/DobotClient_JOG.dir/clean
@@ -523,13 +527,87 @@ dobot/preinstall:
 .PHONY : dobot/preinstall
 
 #=============================================================================
+# Target rules for target dobot/CMakeFiles/poseFollow.dir
+
+# All Build rule for target.
+dobot/CMakeFiles/poseFollow.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
+	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/depend
+	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=100 "Built target poseFollow"
+.PHONY : dobot/CMakeFiles/poseFollow.dir/all
+
+# Include target in all.
+all: dobot/CMakeFiles/poseFollow.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+dobot/CMakeFiles/poseFollow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 20
+	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/poseFollow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+.PHONY : dobot/CMakeFiles/poseFollow.dir/rule
+
+# Convenience name for target.
+poseFollow: dobot/CMakeFiles/poseFollow.dir/rule
+
+.PHONY : poseFollow
+
+# clean rule for target.
+dobot/CMakeFiles/poseFollow.dir/clean:
+	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/clean
+.PHONY : dobot/CMakeFiles/poseFollow.dir/clean
+
+# clean rule for target.
+clean: dobot/CMakeFiles/poseFollow.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target dobot/CMakeFiles/KDL_ForwardKin2.dir
+
+# All Build rule for target.
+dobot/CMakeFiles/KDL_ForwardKin2.dir/all:
+	$(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/depend
+	$(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=2 "Built target KDL_ForwardKin2"
+.PHONY : dobot/CMakeFiles/KDL_ForwardKin2.dir/all
+
+# Include target in all.
+all: dobot/CMakeFiles/KDL_ForwardKin2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+dobot/CMakeFiles/KDL_ForwardKin2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/KDL_ForwardKin2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+.PHONY : dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
+
+# Convenience name for target.
+KDL_ForwardKin2: dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
+
+.PHONY : KDL_ForwardKin2
+
+# clean rule for target.
+dobot/CMakeFiles/KDL_ForwardKin2.dir/clean:
+	$(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/clean
+.PHONY : dobot/CMakeFiles/KDL_ForwardKin2.dir/clean
+
+# clean rule for target.
+clean: dobot/CMakeFiles/KDL_ForwardKin2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target dobot/CMakeFiles/TowerBuilder.dir
 
 # All Build rule for target.
 dobot/CMakeFiles/TowerBuilder.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/TowerBuilder.dir/build.make dobot/CMakeFiles/TowerBuilder.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/TowerBuilder.dir/build.make dobot/CMakeFiles/TowerBuilder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=3 "Built target TowerBuilder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target TowerBuilder"
 .PHONY : dobot/CMakeFiles/TowerBuilder.dir/all
 
 # Include target in all.
@@ -576,7 +654,7 @@ all: dobot/CMakeFiles/DobotClient_PTP.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/DobotClient_PTP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_PTP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/DobotClient_PTP.dir/rule
@@ -613,7 +691,7 @@ all: dobot/CMakeFiles/DobotClient_JOG.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/DobotClient_JOG.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_JOG.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/DobotClient_JOG.dir/rule
@@ -888,7 +966,7 @@ clean: dobot/CMakeFiles/dobot_genlisp.dir/clean
 dobot/CMakeFiles/PickAndPlac.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/PickAndPlac.dir/build.make dobot/CMakeFiles/PickAndPlac.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/PickAndPlac.dir/build.make dobot/CMakeFiles/PickAndPlac.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=2 "Built target PickAndPlac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=3 "Built target PickAndPlac"
 .PHONY : dobot/CMakeFiles/PickAndPlac.dir/all
 
 # Include target in all.
@@ -898,7 +976,7 @@ all: dobot/CMakeFiles/PickAndPlac.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/PickAndPlac.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/PickAndPlac.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/PickAndPlac.dir/rule
@@ -1022,7 +1100,7 @@ dobot/CMakeFiles/dobot_geneus.dir/all: dobot/CMakeFiles/dobot_generate_messages_
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_geneus.dir/rule
@@ -1054,7 +1132,7 @@ dobot/CMakeFiles/dobot_gencpp.dir/all: dobot/CMakeFiles/dobot_generate_messages_
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_gencpp.dir/rule
@@ -1283,7 +1361,7 @@ all: dobot/CMakeFiles/DobotServer.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/DobotServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/DobotServer.dir/rule
@@ -2627,12 +2705,12 @@ dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/_dobot_ge
 dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target dobot_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target dobot_generate_messages_eus"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
@@ -3743,12 +3821,12 @@ dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all: dobot/CMakeFiles/_dobot_ge
 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target dobot_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target dobot_generate_messages_cpp"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule

@@ -20,6 +20,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/kgrela/dobot_ws/devel/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
+  "/usr/include/eigen3"
   "/home/kgrela/dobot_ws/src/dobot/src/DobotDll_x64"
   )
 

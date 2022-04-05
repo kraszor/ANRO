@@ -7,7 +7,7 @@ arm2_size:
     - 0.147
     - 0.03
 gripper_size:
-    - 0.04
+    - 0.08
     - 0.02
 platform_origins: 0 0 0.044
 arm1_origins: 0 0 0.0675
@@ -22,13 +22,13 @@ joint1_axis: 0 0 1
 effort: 100
 joint2_limits:
     - 0.0
-    - 1.4835
+    - 1.571
 joint2_velocity: 
     - 320.0
 joint2_axis: 0 1 0
 joint3_limits:
-    - -0.17453
-    - 1.658
+    - 0.5
+    - 1.571
 joint3_velocity: 
     - 320.0
 joint3_axis: 0 1 0

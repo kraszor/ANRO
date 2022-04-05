@@ -318,3 +318,8 @@ add_executable(KDL_ForwardKin2 src/KDL_ForwardKin2.cpp)
 target_link_libraries(KDL_ForwardKin2 ${catkin_LIBRARIES})
 #target_link_libraries(KDL_ForwardKin2 Eigen3::Eigen)
 target_link_libraries(KDL_ForwardKin2 orocos-kdl)
+
+add_executable(poseFollow src/poseFollow.cpp)
+target_link_libraries(poseFollow ${catkin_LIBRARIES})
+add_dependencies(poseFollow dobot_gencpp)
+

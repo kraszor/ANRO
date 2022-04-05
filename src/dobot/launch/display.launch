@@ -5,6 +5,6 @@
 
   <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  <node name="KDL_ForwardKin2" pkg="dobot" type="KDL_ForwardKin2" output="screen"/> 
+  <node name="KDL_ForwardKin2" pkg="dobot" type="KDL_ForwardKin2" output="screen"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dobot)/rviz/urdf.rviz" required="true" />
 </launch>

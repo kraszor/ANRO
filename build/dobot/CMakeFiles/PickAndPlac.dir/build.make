@@ -90,6 +90,23 @@ PickAndPlac_EXTERNAL_OBJECTS =
 
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: dobot/CMakeFiles/PickAndPlac.dir/src/PickAndPlac.cpp.o
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: dobot/CMakeFiles/PickAndPlac.dir/build.make
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libkdl_parser.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/liburdf.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/liburdfdom_model.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libclass_loader.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/libPocoFoundation.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libroslib.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/librospack.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libroscpp.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/librosconsole.so
@@ -97,8 +114,8 @@ PickAndPlac_EXTERNAL_OBJECTS =
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/librosconsole_backend_interface.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/librostime.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /opt/ros/melodic/lib/libcpp_common.so
 /home/kgrela/dobot_ws/devel/lib/dobot/PickAndPlac: /usr/lib/x86_64-linux-gnu/libboost_system.so
