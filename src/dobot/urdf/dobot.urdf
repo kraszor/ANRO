@@ -37,18 +37,18 @@
   <link name="fourth">
     <visual>
       <geometry>
-        <box size="0.06 0.06 0.06"/>
+        <box size="${params.fourth_size}"/>
       </geometry>
-      <origin xyz="0.0 0.0 0.03"/>
+      <origin xyz="${params.fourth_origins}"/>
     </visual>
   </link>
   <link name="gripper">
       <visual>
         <geometry>
 	  <!-- <cylinder length="${params.gripper_size[0]}" radius="${params.gripper_size[1]}"/> -->
-    <box size="0.06 0.03 0.09"/>
+    <box size="${params.gripper_size}"/>
 	</geometry>
-	<origin xyz="0.045 0 0" rpy="0 1.571 0"/>
+	<origin xyz="${params.gripper_origins[0]}" rpy="${params.gripper_origins[1]}"/>
       </visual>
   </link>
   
@@ -79,16 +79,16 @@
   <joint name="joint5" type="revolute">
    <parent link="arm2" />
    <child link="fourth" />
-  <limit effort="${params.effort}" lower="-1.571" upper="1.571" velocity="${params.joint3_velocity[0]}"/>
-  <axis xyz="0 1 0"/>
-  <origin xyz="0.0 0.0 0.147"/>
+  <limit effort="${params.effort}" lower="${params.joint5_limits[0]}" upper="${params.joint5_limits[1]}" velocity="${params.joint3_velocity[0]}"/>
+  <axis xyz="${params.joint5_axis}"/>
+  <origin xyz="${params.joint5_origins}"/>
   </joint>
 
   <joint name="joint4" type="revolute">
    <parent link="fourth" />
    <child link="gripper" />
 	<limit effort="${params.effort}" lower="${params.joint4_limits[1]}" upper="${params.joint4_limits[0]}" velocity="${params.joint4_velocity[0]}"/>
-	<axis xyz="1 0 0"/>
-	<origin xyz="0.03 0.0 0.03"/>
+	<axis xyz="${params.joint4_axis}"/>
+	<origin xyz="${params.joint4_origins}"/>
   </joint>
 </robot>
