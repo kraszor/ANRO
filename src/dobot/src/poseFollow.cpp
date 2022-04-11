@@ -1,9 +1,5 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-#include "dobot/SetCmdTimeout.h"
-#include "dobot/SetQueuedCmdClear.h"
-#include "dobot/SetQueuedCmdStartExec.h"
-#include "dobot/SetQueuedCmdForceStopExec.h"
 #include "dobot/GetDeviceVersion.h"
 #include "dobot/GetPose.h"
 #include "dobot/SetWAITCmd.h"
@@ -15,32 +11,8 @@ int main(int argc, char **argv)
     ros::NodeHandle n;
     ros::Publisher publisher = n.advertise<sensor_msgs::JointState>("/joint_states", 1000);
     ros::ServiceClient client;
-    ros::ServiceClient waiter;
-
-	
-
-	// SetCmdTimeout
-    client = n.serviceClient<dobot::SetCmdTimeout>("/DobotServer/SetCmdTimeout");
-    dobot::SetCmdTimeout srv1;
-    srv1.request.timeout = 3000;
-    if (client.call(srv1) == false) {
-        ROS_ERROR("Failed to call SetCmdTimeout. Maybe DobotServer isn't started yet!");
-        return -1;
-
-	// Clear the command queue
-    client = n.serviceClient<dobot::SetQueuedCmdClear>("/DobotServer/SetQueuedCmdClear");
-    dobot::SetQueuedCmdClear srv2;
-    client.call(srv2);
-
-    	// Start running the command queue
-    client = n.serviceClient<dobot::SetQueuedCmdStartExec>("/DobotServer/SetQueuedCmdStartExec");
-    dobot::SetQueuedCmdStartExec srv3;
-    client.call(srv3);
-    }
 
     client = n.serviceClient<dobot::GetPose>("/DobotServer/GetPose");
-    waiter = n.serviceClient<dobot::SetWAITCmd>("/DobotServer/SetWAITCmd");
-    dobot::SetWAITCmd waiterSrv;
     dobot::GetPose positionsrv;
     sensor_msgs::JointState msg;
 	msg.position.resize(5);
