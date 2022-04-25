@@ -323,3 +323,6 @@ add_executable(poseFollow src/poseFollow.cpp)
 target_link_libraries(poseFollow ${catkin_LIBRARIES})
 add_dependencies(poseFollow dobot_gencpp)
 
+add_executable(KDL_InverseKin src/KDL_InverseKin.cpp)
+target_link_libraries(KDL_InverseKin ${catkin_LIBRARIES})
+target_link_libraries(KDL_InverseKin orocos-kdl)
