@@ -4,15 +4,19 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Grid1
         - /TF1
         - /Pose1
+        - /PointStamped1
       Splitter Ratio: 0.5
-    Tree Height: 296
+    Tree Height: 217
   - Class: rviz/Views
     Expanded:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz/Selection
+    Name: Selection
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -20,22 +24,22 @@ Toolbars:
 Visualization Manager:
   Class: ""
   Displays:
-    - Alpha: 0.5
-      Cell Size: 1
+    - Alpha: 1
+      Cell Size: 0.054999999701976776
       Class: rviz/Grid
-      Color: 160; 160; 164
+      Color: 78; 154; 6
       Enabled: true
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
       Name: Grid
-      Normal Cell Count: 0
+      Normal Cell Count: 11
       Offset:
         X: 0
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 10
+      Plane Cell Count: 6
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 0.800000011920929
@@ -59,6 +63,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fourth:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -98,7 +107,7 @@ Visualization Manager:
       Axes Radius: 0.10000000149011612
       Class: rviz/Pose
       Color: 248; 14; 182
-      Enabled: true
+      Enabled: false
       Head Length: 0.05000000074505806
       Head Radius: 0.05000000074505806
       Name: Pose
@@ -106,6 +115,16 @@ Visualization Manager:
       Shaft Radius: 0.009999999776482582
       Shape: Arrow
       Topic: /goalpose
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 114; 159; 207
+      Enabled: true
+      History Length: 2
+      Name: PointStamped
+      Radius: 0.009999999776482582
+      Topic: /clicked_point
       Unreliable: false
       Value: true
   Enabled: true
@@ -117,11 +136,14 @@ Visualization Manager:
   Name: root
   Tools:
     - Class: rviz/MoveCamera
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
   Value: true
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.7966758012771606
+      Distance: 0.5310747027397156
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -136,20 +158,22 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.00500000175088644
+      Pitch: 0.5099985003471375
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.5836303234100342
+      Yaw: 3.4946205615997314
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 800
+  Height: 849
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000010000000000000158000002c6fc0200000002fb000000100044006900730070006c006100790073010000003d000001ab000000c900fffffffb0000000a0056006900650077007301000001ee00000115000000a400ffffff00000352000002c600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd000000010000000000000158000002f7fc0200000003fb000000100044006900730070006c006100790073010000003d0000015c000000c900fffffffb0000000a00560069006500770073010000019f000000e0000000a400fffffffb0000001200530065006c0065006300740069006f006e0100000285000000af0000005c00ffffff0000031f000002f700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
   Views:
     collapsed: false
-  Width: 1200
-  X: 193
-  Y: 123
+  Width: 1149
+  X: 235
+  Y: 66
