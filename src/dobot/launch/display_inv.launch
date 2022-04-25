@@ -1,0 +1,10 @@
+<launch>
+
+  <arg name="model" default="$(find dobot)/urdf/dobot.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="KDL_InverseKin" pkg="dobot" type="KDL_InverseKin" output="screen"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dobot)/rviz/urdf.rviz" required="true" />
+</launch>
