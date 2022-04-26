@@ -326,3 +326,7 @@ add_dependencies(poseFollow dobot_gencpp)
 add_executable(KDL_InverseKin src/KDL_InverseKin.cpp)
 target_link_libraries(KDL_InverseKin ${catkin_LIBRARIES})
 target_link_libraries(KDL_InverseKin orocos-kdl)
+
+add_executable(dobotInv src/dobotInv.cpp)
+target_link_libraries(dobotInv ${catkin_LIBRARIES} DobotDll)
+add_dependencies(dobotInv dobot_gencpp)

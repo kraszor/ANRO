@@ -27,7 +27,7 @@ void callback(const sensor_msgs::JointState::ConstPtr& msg) {
 int main( int argc, char** argv )
 {
     KDL::Chain chain;
-    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,0.0,0.113))));
+    chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,0.0,0.09015))));
     chain.addSegment(Segment(Joint(Joint::RotY),Frame(Rotation::EulerZYX(0.0,0.0,-(M_PI/2)),Vector(0.0,0.0,0.135))));
     chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Vector(0.0,-0.147,0.0))));
     chain.addSegment(Segment(Joint(Joint::RotZ),Frame(Rotation::EulerZYX(0.0,(M_PI/2),0.0), Vector(0.03,-0.03,0.0))));

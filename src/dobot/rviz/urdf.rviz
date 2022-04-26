@@ -9,7 +9,7 @@ Panels:
         - /Pose1
         - /PointStamped1
       Splitter Ratio: 0.5
-    Tree Height: 217
+    Tree Height: 302
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -33,13 +33,13 @@ Visualization Manager:
         Line Width: 0.029999999329447746
         Value: Lines
       Name: Grid
-      Normal Cell Count: 11
+      Normal Cell Count: 8
       Offset:
         X: 0
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 6
+      Plane Cell Count: 8
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 0.800000011920929
@@ -143,7 +143,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.5310747027397156
+      Distance: 0.8000734448432922
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -158,22 +158,22 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5099985003471375
+      Pitch: 0.14499841630458832
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.4946205615997314
+      Yaw: 0.7464592456817627
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 849
+  Height: 1031
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000010000000000000158000002f7fc0200000003fb000000100044006900730070006c006100790073010000003d0000015c000000c900fffffffb0000000a00560069006500770073010000019f000000e0000000a400fffffffb0000001200530065006c0065006300740069006f006e0100000285000000af0000005c00ffffff0000031f000002f700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd000000010000000000000158000003adfc0200000003fb000000100044006900730070006c006100790073010000003d000001b1000000c900fffffffb0000000a0056006900650077007301000001f400000116000000a400fffffffb0000001200530065006c0065006300740069006f006e0100000310000000da0000005c00ffffff00000622000003ad00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1149
-  X: 235
-  Y: 66
+  Width: 1920
+  X: 0
+  Y: 25

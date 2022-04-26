@@ -37,6 +37,8 @@
 /home/kgrela/dobot_ws/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/rebuild_cache.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/test.dir
+/home/kgrela/dobot_ws/build/dobot/CMakeFiles/dobotInv.dir
+/home/kgrela/dobot_ws/build/dobot/CMakeFiles/KDL_InverseKin.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/poseFollow.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/KDL_ForwardKin2.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/TowerBuilder.dir

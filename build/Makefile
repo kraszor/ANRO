@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named dobotInv
+
+# Build rule for target.
+dobotInv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dobotInv
+.PHONY : dobotInv
+
+# fast build rule for target.
+dobotInv/fast:
+	$(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/build
+.PHONY : dobotInv/fast
+
+#=============================================================================
+# Target rules for targets named KDL_InverseKin
+
+# Build rule for target.
+KDL_InverseKin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KDL_InverseKin
+.PHONY : KDL_InverseKin
+
+# fast build rule for target.
+KDL_InverseKin/fast:
+	$(MAKE) -f dobot/CMakeFiles/KDL_InverseKin.dir/build.make dobot/CMakeFiles/KDL_InverseKin.dir/build
+.PHONY : KDL_InverseKin/fast
+
+#=============================================================================
 # Target rules for targets named poseFollow
 
 # Build rule for target.
@@ -1580,6 +1606,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... dobotInv"
+	@echo "... KDL_InverseKin"
 	@echo "... poseFollow"
 	@echo "... KDL_ForwardKin2"
 	@echo "... TowerBuilder"

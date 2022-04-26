@@ -27,8 +27,8 @@ int main(int argc, char **argv)
 	msg.name[4] = "joint4";
 	msg.position[0] = (3.14/180)*positionsrv.response.jointAngle[0];
 	msg.position[1] = (3.14/180)*positionsrv.response.jointAngle[1];
-	msg.position[2] = (3.14/180)*positionsrv.response.jointAngle[2] +1.571;
-	msg.position[3] = -(3.14/180)*positionsrv.response.jointAngle[1]-(3.14/180)*positionsrv.response.jointAngle[2];
+	msg.position[2] = (3.14/180)*positionsrv.response.jointAngle[2] +(1.57 - (3.14/180)*positionsrv.response.jointAngle[1]);
+	msg.position[3] = -(3.14/180)*positionsrv.response.jointAngle[1]-(3.14/180)*positionsrv.response.jointAngle[2]+(1.57-(1.57 - (3.14/180)*positionsrv.response.jointAngle[1]));
 	msg.position[4] = (3.14/180)*positionsrv.response.jointAngle[3];
 	publisher.publish(msg);
 	std::cout << (3.14/180)*positionsrv.response.jointAngle[0] << " " << (3.14/180)*positionsrv.response.jointAngle[1] << " "<< (3.14/180)*positionsrv.response.jointAngle[2] << " " << "0.0" << " " <<(3.14/180)*positionsrv.response.jointAngle[3]<< std::endl;

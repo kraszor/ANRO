@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+dobot/CMakeFiles/dobotInv.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobotInv.dir/rule
+.PHONY : dobot/CMakeFiles/dobotInv.dir/rule
+
+# Convenience name for target.
+dobotInv: dobot/CMakeFiles/dobotInv.dir/rule
+
+.PHONY : dobotInv
+
+# fast build rule for target.
+dobotInv/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/build
+.PHONY : dobotInv/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/KDL_InverseKin.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/KDL_InverseKin.dir/rule
+.PHONY : dobot/CMakeFiles/KDL_InverseKin.dir/rule
+
+# Convenience name for target.
+KDL_InverseKin: dobot/CMakeFiles/KDL_InverseKin.dir/rule
+
+.PHONY : KDL_InverseKin
+
+# fast build rule for target.
+KDL_InverseKin/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_InverseKin.dir/build.make dobot/CMakeFiles/KDL_InverseKin.dir/build
+.PHONY : KDL_InverseKin/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/poseFollow.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/poseFollow.dir/rule
 .PHONY : dobot/CMakeFiles/poseFollow.dir/rule
@@ -1745,6 +1775,33 @@ src/KDL_ForwardKin2.cpp.s:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/src/KDL_ForwardKin2.cpp.s
 .PHONY : src/KDL_ForwardKin2.cpp.s
 
+src/KDL_InverseKin.o: src/KDL_InverseKin.cpp.o
+
+.PHONY : src/KDL_InverseKin.o
+
+# target to build an object file
+src/KDL_InverseKin.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_InverseKin.dir/build.make dobot/CMakeFiles/KDL_InverseKin.dir/src/KDL_InverseKin.cpp.o
+.PHONY : src/KDL_InverseKin.cpp.o
+
+src/KDL_InverseKin.i: src/KDL_InverseKin.cpp.i
+
+.PHONY : src/KDL_InverseKin.i
+
+# target to preprocess a source file
+src/KDL_InverseKin.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_InverseKin.dir/build.make dobot/CMakeFiles/KDL_InverseKin.dir/src/KDL_InverseKin.cpp.i
+.PHONY : src/KDL_InverseKin.cpp.i
+
+src/KDL_InverseKin.s: src/KDL_InverseKin.cpp.s
+
+.PHONY : src/KDL_InverseKin.s
+
+# target to generate assembly for a file
+src/KDL_InverseKin.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_InverseKin.dir/build.make dobot/CMakeFiles/KDL_InverseKin.dir/src/KDL_InverseKin.cpp.s
+.PHONY : src/KDL_InverseKin.cpp.s
+
 src/PickAndPlac.o: src/PickAndPlac.cpp.o
 
 .PHONY : src/PickAndPlac.o
@@ -1799,6 +1856,33 @@ src/TowerBuilder.cpp.s:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/TowerBuilder.dir/build.make dobot/CMakeFiles/TowerBuilder.dir/src/TowerBuilder.cpp.s
 .PHONY : src/TowerBuilder.cpp.s
 
+src/dobotInv.o: src/dobotInv.cpp.o
+
+.PHONY : src/dobotInv.o
+
+# target to build an object file
+src/dobotInv.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/src/dobotInv.cpp.o
+.PHONY : src/dobotInv.cpp.o
+
+src/dobotInv.i: src/dobotInv.cpp.i
+
+.PHONY : src/dobotInv.i
+
+# target to preprocess a source file
+src/dobotInv.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/src/dobotInv.cpp.i
+.PHONY : src/dobotInv.cpp.i
+
+src/dobotInv.s: src/dobotInv.cpp.s
+
+.PHONY : src/dobotInv.s
+
+# target to generate assembly for a file
+src/dobotInv.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/src/dobotInv.cpp.s
+.PHONY : src/dobotInv.cpp.s
+
 src/poseFollow.o: src/poseFollow.cpp.o
 
 .PHONY : src/poseFollow.o
@@ -1834,6 +1918,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... dobotInv"
+	@echo "... KDL_InverseKin"
 	@echo "... poseFollow"
 	@echo "... KDL_ForwardKin2"
 	@echo "... TowerBuilder"
@@ -1949,12 +2035,18 @@ help:
 	@echo "... src/KDL_ForwardKin2.o"
 	@echo "... src/KDL_ForwardKin2.i"
 	@echo "... src/KDL_ForwardKin2.s"
+	@echo "... src/KDL_InverseKin.o"
+	@echo "... src/KDL_InverseKin.i"
+	@echo "... src/KDL_InverseKin.s"
 	@echo "... src/PickAndPlac.o"
 	@echo "... src/PickAndPlac.i"
 	@echo "... src/PickAndPlac.s"
 	@echo "... src/TowerBuilder.o"
 	@echo "... src/TowerBuilder.i"
 	@echo "... src/TowerBuilder.s"
+	@echo "... src/dobotInv.o"
+	@echo "... src/dobotInv.i"
+	@echo "... src/dobotInv.s"
 	@echo "... src/poseFollow.o"
 	@echo "... src/poseFollow.i"
 	@echo "... src/poseFollow.s"
