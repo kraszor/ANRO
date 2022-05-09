@@ -15,6 +15,10 @@ gripper_origins:
     - 0 1.571 0
 fourth_size: 0.06 0.06 0.05
 fourth_origins: 0.0 0.0 0.025
+camera_size: 0.025 0.09 0.025
+camera_origins: 0 0 0.0075
+camera_grip_size: 0.03 0.03 0.07 
+camera_grip_origins: 0.0 0 0.03
 joint1_limits:
     - -1.571
     - 1.571
@@ -44,6 +48,10 @@ joint5_limits:
     - 1.571
 joint5_axis: 0 1 0
 joint5_origins: 0.0 0.0 0.162
+joint6_axis: 0 1 0
+joint6_origins: 0.0 0.0 0.05
+joint7_axis: 0 0 1
+joint7_origins: 0.0 0.0 0.07
 joint4_axis: 1 0 0
 joint1_origins: 0 0 0.02515
 joint2_origins: 0 0 0.065

@@ -330,3 +330,7 @@ target_link_libraries(KDL_InverseKin orocos-kdl)
 add_executable(dobotInv src/dobotInv.cpp)
 target_link_libraries(dobotInv ${catkin_LIBRARIES} DobotDll)
 add_dependencies(dobotInv dobot_gencpp)
+
+add_executable(marker_publisher src/marker_publisher.cpp)
+target_link_libraries(marker_publisher ${catkin_LIBRARIES} DobotDll)
+add_dependencies(marker_publisher dobot_gencpp)
