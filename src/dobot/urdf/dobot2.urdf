@@ -50,7 +50,7 @@
 	<origin xyz="${params.gripper_origins[0]}" rpy="${params.gripper_origins[1]}"/>
       </visual>
   </link>
-  <link name="camera">
+  <link name="camera_link">
       <visual>
         <geometry>
     <box size="${params.camera_size}"/>
@@ -58,7 +58,7 @@
 	<origin xyz="${params.camera_origins}"/>
       </visual>
   </link>
-    <link name="camera_link">
+    <link name="camera_stick">
       <visual>
         <geometry>
     <box size="${params.camera_grip_size}"/>
@@ -111,13 +111,13 @@
 
     <joint name="joint6" type="fixed">
    <parent link="fourth" />
-   <child link="camera_link" />
+   <child link="camera_stick" />
 	<axis xyz="${params.joint6_axis}"/>
 	<origin xyz="${params.joint6_origins}"/>
   </joint>
     <joint name="joint7" type="fixed">
-   <parent link="camera_link" />
-   <child link="camera" />
+   <parent link="camera_stick" />
+   <child link="camera_link" />
 	<axis xyz="${params.joint7_axis}"/>
 	<origin xyz="${params.joint7_origins}"/>
   </joint>

@@ -1,2 +1,2 @@
-dobot
+ar_track_alvar/ar_track_alvar:ar_track_alvar/ar_track_alvar_msgs:dobot:realsense-ros/realsense2_camera:realsense-ros/realsense2_description
 -DCATKIN_DEVEL_PREFIX=/home/kgrela/dobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kgrela/dobot_ws/install -G Unix Makefiles

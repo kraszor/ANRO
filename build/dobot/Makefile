@@ -102,6 +102,18 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -122,18 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+dobot/CMakeFiles/marker_broker.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/marker_broker.dir/rule
+.PHONY : dobot/CMakeFiles/marker_broker.dir/rule
+
+# Convenience name for target.
+marker_broker: dobot/CMakeFiles/marker_broker.dir/rule
+
+.PHONY : marker_broker
+
+# fast build rule for target.
+marker_broker/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_broker.dir/build.make dobot/CMakeFiles/marker_broker.dir/build
+.PHONY : marker_broker/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/dobotInv.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobotInv.dir/rule
 .PHONY : dobot/CMakeFiles/dobotInv.dir/rule
@@ -181,6 +196,21 @@ dobotInv: dobot/CMakeFiles/dobotInv.dir/rule
 dobotInv/fast:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/build
 .PHONY : dobotInv/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/marker_publisher.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/marker_publisher.dir/rule
+.PHONY : dobot/CMakeFiles/marker_publisher.dir/rule
+
+# Convenience name for target.
+marker_publisher: dobot/CMakeFiles/marker_publisher.dir/rule
+
+.PHONY : marker_publisher
+
+# fast build rule for target.
+marker_publisher/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/build
+.PHONY : marker_publisher/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/KDL_InverseKin.dir/rule:
@@ -198,184 +228,19 @@ KDL_InverseKin/fast:
 .PHONY : KDL_InverseKin/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/poseFollow.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/poseFollow.dir/rule
-.PHONY : dobot/CMakeFiles/poseFollow.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
 
 # Convenience name for target.
-poseFollow: dobot/CMakeFiles/poseFollow.dir/rule
+_dobot_generate_messages_check_deps_SetARCParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
 
-.PHONY : poseFollow
+.PHONY : _dobot_generate_messages_check_deps_SetARCParams
 
 # fast build rule for target.
-poseFollow/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/build
-.PHONY : poseFollow/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/KDL_ForwardKin2.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
-.PHONY : dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
-
-# Convenience name for target.
-KDL_ForwardKin2: dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
-
-.PHONY : KDL_ForwardKin2
-
-# fast build rule for target.
-KDL_ForwardKin2/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/build
-.PHONY : KDL_ForwardKin2/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/TowerBuilder.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/TowerBuilder.dir/rule
-.PHONY : dobot/CMakeFiles/TowerBuilder.dir/rule
-
-# Convenience name for target.
-TowerBuilder: dobot/CMakeFiles/TowerBuilder.dir/rule
-
-.PHONY : TowerBuilder
-
-# fast build rule for target.
-TowerBuilder/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/TowerBuilder.dir/build.make dobot/CMakeFiles/TowerBuilder.dir/build
-.PHONY : TowerBuilder/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/DobotClient_PTP.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_PTP.dir/rule
-.PHONY : dobot/CMakeFiles/DobotClient_PTP.dir/rule
-
-# Convenience name for target.
-DobotClient_PTP: dobot/CMakeFiles/DobotClient_PTP.dir/rule
-
-.PHONY : DobotClient_PTP
-
-# fast build rule for target.
-DobotClient_PTP/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_PTP.dir/build.make dobot/CMakeFiles/DobotClient_PTP.dir/build
-.PHONY : DobotClient_PTP/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/DobotClient_JOG.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_JOG.dir/rule
-.PHONY : dobot/CMakeFiles/DobotClient_JOG.dir/rule
-
-# Convenience name for target.
-DobotClient_JOG: dobot/CMakeFiles/DobotClient_JOG.dir/rule
-
-.PHONY : DobotClient_JOG
-
-# fast build rule for target.
-DobotClient_JOG/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_JOG.dir/build.make dobot/CMakeFiles/DobotClient_JOG.dir/build
-.PHONY : DobotClient_JOG/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_py.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
-
-.PHONY : dobot_generate_messages_py
-
-# fast build rule for target.
-dobot_generate_messages_py/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
-.PHONY : dobot_generate_messages_py/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_gennodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gennodejs.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_gennodejs.dir/rule
-
-# Convenience name for target.
-dobot_gennodejs: dobot/CMakeFiles/dobot_gennodejs.dir/rule
-
-.PHONY : dobot_gennodejs
-
-# fast build rule for target.
-dobot_gennodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_gennodejs.dir/build.make dobot/CMakeFiles/dobot_gennodejs.dir/build
-.PHONY : dobot_gennodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
-
-.PHONY : dobot_generate_messages_nodejs
-
-# fast build rule for target.
-dobot_generate_messages_nodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
-.PHONY : dobot_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_genlisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genlisp.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_genlisp.dir/rule
-
-# Convenience name for target.
-dobot_genlisp: dobot/CMakeFiles/dobot_genlisp.dir/rule
-
-.PHONY : dobot_genlisp
-
-# fast build rule for target.
-dobot_genlisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_genlisp.dir/build.make dobot/CMakeFiles/dobot_genlisp.dir/build
-.PHONY : dobot_genlisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/PickAndPlac.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/PickAndPlac.dir/rule
-.PHONY : dobot/CMakeFiles/PickAndPlac.dir/rule
-
-# Convenience name for target.
-PickAndPlac: dobot/CMakeFiles/PickAndPlac.dir/rule
-
-.PHONY : PickAndPlac
-
-# fast build rule for target.
-PickAndPlac/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/PickAndPlac.dir/build.make dobot/CMakeFiles/PickAndPlac.dir/build
-.PHONY : PickAndPlac/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
-
-.PHONY : dobot_generate_messages_lisp
-
-# fast build rule for target.
-dobot_generate_messages_lisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
-.PHONY : dobot_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_geneus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_geneus.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_geneus.dir/rule
-
-# Convenience name for target.
-dobot_geneus: dobot/CMakeFiles/dobot_geneus.dir/rule
-
-.PHONY : dobot_geneus
-
-# fast build rule for target.
-dobot_geneus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_geneus.dir/build.make dobot/CMakeFiles/dobot_geneus.dir/build
-.PHONY : dobot_geneus/fast
+_dobot_generate_messages_check_deps_SetARCParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetARCParams/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/dobot_gencpp.dir/rule:
@@ -393,394 +258,34 @@ dobot_gencpp/fast:
 .PHONY : dobot_gencpp/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetJOGCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
+_dobot_generate_messages_check_deps_SetARCCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_SetARCCmd
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast
+_dobot_generate_messages_check_deps_SetARCCmd/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetARCCmd/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
+dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetDeviceSN: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
+dobot_generate_messages_nodejs: dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN
+.PHONY : dobot_generate_messages_nodejs
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetDeviceSN/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetColorSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetColorSensor
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetColorSensor/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetColorSensor/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetPTPJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetPTPJointParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetEndEffectorGripper: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetEndEffectorGripper/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetDeviceName: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetDeviceName
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetDeviceName/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetDeviceName/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/DobotServer.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotServer.dir/rule
-.PHONY : dobot/CMakeFiles/DobotServer.dir/rule
-
-# Convenience name for target.
-DobotServer: dobot/CMakeFiles/DobotServer.dir/rule
-
-.PHONY : DobotServer
-
-# fast build rule for target.
-DobotServer/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotServer.dir/build.make dobot/CMakeFiles/DobotServer.dir/build
-.PHONY : DobotServer/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetTRIGCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetTRIGCmd/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetColorSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetColorSensor
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetColorSensor/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetColorSensor/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetEndEffectorLaser: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetEndEffectorLaser/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetPTPCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetPTPCmd/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetInfraredSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetInfraredSensor/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetIOPWM: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetIOPWM
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetIOPWM/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetIOPWM/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetJOGCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetJOGCommonParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages: dobot/CMakeFiles/dobot_generate_messages.dir/rule
-
-.PHONY : dobot_generate_messages
-
-# fast build rule for target.
-dobot_generate_messages/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages.dir/build.make dobot/CMakeFiles/dobot_generate_messages.dir/build
-.PHONY : dobot_generate_messages/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetIODO: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetIODO
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetIODO/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetIODO/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetQueuedCmdStartExec: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetPTPCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetPTPCommonParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: dobot/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_py.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetCmdTimeout: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetCmdTimeout/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetHOMEParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetHOMEParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetEndEffectorLaser: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetEndEffectorLaser/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser/fast
+dobot_generate_messages_nodejs/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/dobot_generate_messages_nodejs.dir/build
+.PHONY : dobot_generate_messages_nodejs/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMEParams.dir/rule:
@@ -798,364 +303,19 @@ _dobot_generate_messages_check_deps_SetHOMEParams/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetHOMEParams/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetJOGCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
+_dobot_generate_messages_check_deps_GetAlarmsState: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams
+.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_genpy.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genpy.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_genpy.dir/rule
-
-# Convenience name for target.
-dobot_genpy: dobot/CMakeFiles/dobot_genpy.dir/rule
-
-.PHONY : dobot_genpy
-
-# fast build rule for target.
-dobot_genpy/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_genpy.dir/build.make dobot/CMakeFiles/dobot_genpy.dir/build
-.PHONY : dobot_genpy/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetEndEffectorGripper: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetEndEffectorGripper/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetCPParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetCPParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetCPParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetCPParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetJOGJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetJOGJointParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetPTPCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetPTPCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetPTPCommonParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetPose: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetPose
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetPose/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetPose/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: dobot/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/roscpp_generate_messages_eus.dir/build.make dobot/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
-
-.PHONY : dobot_generate_messages_eus
-
-# fast build rule for target.
-dobot_generate_messages_eus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
-.PHONY : dobot_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetARCParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetARCParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetARCParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetARCParams/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
-
-# Convenience name for target.
-_dobot_generate_messages_check_deps_GetPTPCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
-
-.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams
-
-# fast build rule for target.
-_dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast
+_dobot_generate_messages_check_deps_GetAlarmsState/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetCPParams.dir/rule:
@@ -1173,79 +333,94 @@ _dobot_generate_messages_check_deps_GetCPParams/fast:
 .PHONY : _dobot_generate_messages_check_deps_GetCPParams/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetIOMultiplexing: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
+_dobot_generate_messages_check_deps_GetPTPCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetIOMultiplexing/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing/fast
+_dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCoordinateParams/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetJOGJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
+_dobot_generate_messages_check_deps_SetEndEffectorGripper: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetJOGJointParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams/fast
+_dobot_generate_messages_check_deps_SetEndEffectorGripper/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorGripper.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorGripper/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_ClearAllAlarmsState: dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
+_dobot_generate_messages_check_deps_SetPTPCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_ClearAllAlarmsState/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build
-.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState/fast
+_dobot_generate_messages_check_deps_SetPTPCmd/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCmd/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetEMotor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
+_dobot_generate_messages_check_deps_SetEndEffectorLaser: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetEMotor
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetEMotor/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetEMotor/fast
+_dobot_generate_messages_check_deps_SetEndEffectorLaser/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorLaser.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorLaser/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
+_dobot_generate_messages_check_deps_SetColorSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup
+.PHONY : _dobot_generate_messages_check_deps_SetColorSensor
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast
+_dobot_generate_messages_check_deps_SetColorSensor/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetColorSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetColorSensor/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetPTPJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPJointParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorParams.dir/rule:
@@ -1278,21 +453,6 @@ _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make dobot/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceVersion.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceVersion.dir/rule
 .PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceVersion.dir/rule
@@ -1308,79 +468,259 @@ _dobot_generate_messages_check_deps_GetDeviceVersion/fast:
 .PHONY : _dobot_generate_messages_check_deps_GetDeviceVersion/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetCPCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
+_dobot_generate_messages_check_deps_GetPose: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetCPCmd
+.PHONY : _dobot_generate_messages_check_deps_GetPose
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetCPCmd/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetCPCmd/fast
+_dobot_generate_messages_check_deps_GetPose/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPose.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPose/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : dobot/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: dobot/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/rule
 
-.PHONY : std_msgs_generate_messages_py
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dobot/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEndEffectorSuctionCup.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetIODI: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
+_dobot_generate_messages_check_deps_SetEMotor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetIODI
+.PHONY : _dobot_generate_messages_check_deps_SetEMotor
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetIODI/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetIODI/fast
+_dobot_generate_messages_check_deps_SetEMotor/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetEMotor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetEMotor/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetARCCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/rule
+_dobot_generate_messages_check_deps_ClearAllAlarmsState: dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetARCCmd
+.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetARCCmd/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCCmd.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetARCCmd/fast
+_dobot_generate_messages_check_deps_ClearAllAlarmsState/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_ClearAllAlarmsState.dir/build
+.PHONY : _dobot_generate_messages_check_deps_ClearAllAlarmsState/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetIODO: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
+_dobot_generate_messages_check_deps_GetIOMultiplexing: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetIODO
+.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetIODO/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetIODO/fast
+_dobot_generate_messages_check_deps_GetIOMultiplexing/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOMultiplexing.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIOMultiplexing/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetJOGJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGJointParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGJointParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_gennodejs.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_gennodejs.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_gennodejs.dir/rule
+
+# Convenience name for target.
+dobot_gennodejs: dobot/CMakeFiles/dobot_gennodejs.dir/rule
+
+.PHONY : dobot_gennodejs
+
+# fast build rule for target.
+dobot_gennodejs/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_gennodejs.dir/build.make dobot/CMakeFiles/dobot_gennodejs.dir/build
+.PHONY : dobot_gennodejs/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetIOPWM: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetIOPWM
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIOPWM/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOPWM.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIOPWM/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetJOGCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCommonParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCommonParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_genpy.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genpy.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_genpy.dir/rule
+
+# Convenience name for target.
+dobot_genpy: dobot/CMakeFiles/dobot_genpy.dir/rule
+
+.PHONY : dobot_genpy
+
+# fast build rule for target.
+dobot_genpy/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_genpy.dir/build.make dobot/CMakeFiles/dobot_genpy.dir/build
+.PHONY : dobot_genpy/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetEndEffectorGripper: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorGripper/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorGripper.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorGripper/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetHOMEParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetHOMEParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetHOMEParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetHOMEParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetCmdTimeout: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetCmdTimeout/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCmdTimeout.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCmdTimeout/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetEndEffectorLaser: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetEndEffectorLaser/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorLaser.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorLaser/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetPTPCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetPTPCommonParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPCommonParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages: dobot/CMakeFiles/dobot_generate_messages.dir/rule
+
+.PHONY : dobot_generate_messages
+
+# fast build rule for target.
+dobot_generate_messages/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages.dir/build.make dobot/CMakeFiles/dobot_generate_messages.dir/build
+.PHONY : dobot_generate_messages/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetInfraredSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetInfraredSensor/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetInfraredSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetInfraredSensor/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIOPWM.dir/rule:
@@ -1398,64 +738,169 @@ _dobot_generate_messages_check_deps_SetIOPWM/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetIOPWM/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_GetAlarmsState: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/rule
+_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_GetAlarmsState/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetAlarmsState.dir/build
-.PHONY : _dobot_generate_messages_check_deps_GetAlarmsState/fast
+_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetEndEffectorSuctionCup.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetPTPJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/rule
+_dobot_generate_messages_check_deps_SetDeviceName: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams
+.PHONY : _dobot_generate_messages_check_deps_SetDeviceName
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetPTPJointParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJointParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetPTPJointParams/fast
+_dobot_generate_messages_check_deps_SetDeviceName/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetDeviceName.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetDeviceName/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_nodejs: dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+_dobot_generate_messages_check_deps_GetPTPJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_nodejs
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams
 
 # fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make dobot/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
+_dobot_generate_messages_check_deps_GetPTPJointParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetPTPJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetPTPJointParams/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetARCParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/rule
+_dobot_generate_messages_check_deps_SetJOGCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetARCParams
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetARCParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetARCParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetARCParams/fast
+_dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCoordinateParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_geneus.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_geneus.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_geneus.dir/rule
+
+# Convenience name for target.
+dobot_geneus: dobot/CMakeFiles/dobot_geneus.dir/rule
+
+.PHONY : dobot_geneus
+
+# fast build rule for target.
+dobot_geneus/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_geneus.dir/build.make dobot/CMakeFiles/dobot_geneus.dir/build
+.PHONY : dobot_geneus/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetColorSensor: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetColorSensor
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetColorSensor/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetColorSensor.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetColorSensor/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetIODI: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetIODI
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIODI/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODI.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIODI/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetCPCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetCPCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetCPCmd/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCPCmd/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetIODO: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetIODO
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetIODO/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIODO.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetIODO/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_py.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_py: dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
+
+.PHONY : dobot_generate_messages_py
+
+# fast build rule for target.
+dobot_generate_messages_py/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
+.PHONY : dobot_generate_messages_py/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetPTPCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetPTPCommonParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCommonParams/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceName.dir/rule:
@@ -1503,6 +948,21 @@ _dobot_generate_messages_check_deps_SetHOMECmd/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetHOMECmd/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/poseFollow.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/poseFollow.dir/rule
+.PHONY : dobot/CMakeFiles/poseFollow.dir/rule
+
+# Convenience name for target.
+poseFollow: dobot/CMakeFiles/poseFollow.dir/rule
+
+.PHONY : poseFollow
+
+# fast build rule for target.
+poseFollow/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/build
+.PHONY : poseFollow/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetInfraredSensor.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetInfraredSensor.dir/rule
 .PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetInfraredSensor.dir/rule
@@ -1533,6 +993,66 @@ _dobot_generate_messages_check_deps_SetIOMultiplexing/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetIOMultiplexing/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetIODO: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetIODO
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetIODO/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetIODO.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetIODO/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdStartExec: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdStartExec.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStartExec/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetCPParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetCPParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetCPParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetCPParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetCPParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetJOGCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetJOGCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetJOGCoordinateParams/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/rule
 .PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/rule
@@ -1546,6 +1066,21 @@ _dobot_generate_messages_check_deps_SetJOGCmd: dobot/CMakeFiles/_dobot_generate_
 _dobot_generate_messages_check_deps_SetJOGCmd/fast:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCmd.dir/build
 .PHONY : _dobot_generate_messages_check_deps_SetJOGCmd/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_genlisp.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genlisp.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_genlisp.dir/rule
+
+# Convenience name for target.
+dobot_genlisp: dobot/CMakeFiles/dobot_genlisp.dir/rule
+
+.PHONY : dobot_genlisp
+
+# fast build rule for target.
+dobot_genlisp/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_genlisp.dir/build.make dobot/CMakeFiles/dobot_genlisp.dir/build
+.PHONY : dobot_genlisp/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetWAITCmd.dir/rule:
@@ -1578,34 +1113,49 @@ _dobot_generate_messages_check_deps_SetQueuedCmdStopExec/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdStopExec/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
-.PHONY : dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
 
 # Convenience name for target.
-dobot_generate_messages_cpp: dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
+_dobot_generate_messages_check_deps_SetJOGJointParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/rule
 
-.PHONY : dobot_generate_messages_cpp
+.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams
 
 # fast build rule for target.
-dobot_generate_messages_cpp/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
-.PHONY : dobot_generate_messages_cpp/fast
+_dobot_generate_messages_check_deps_SetJOGJointParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGJointParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGJointParams/fast
 
 # Convenience name for target.
-dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
-.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
 
 # Convenience name for target.
-_dobot_generate_messages_check_deps_SetJOGCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
+_dobot_generate_messages_check_deps_SetPTPCoordinateParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/rule
 
-.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams
 
 # fast build rule for target.
-_dobot_generate_messages_check_deps_SetJOGCommonParams/fast:
-	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build
-.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams/fast
+_dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPCoordinateParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetPTPCoordinateParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/TowerBuilder.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/TowerBuilder.dir/rule
+.PHONY : dobot/CMakeFiles/TowerBuilder.dir/rule
+
+# Convenience name for target.
+TowerBuilder: dobot/CMakeFiles/TowerBuilder.dir/rule
+
+.PHONY : TowerBuilder
+
+# fast build rule for target.
+TowerBuilder/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/TowerBuilder.dir/build.make dobot/CMakeFiles/TowerBuilder.dir/build
+.PHONY : TowerBuilder/fast
 
 # Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetPTPJumpParams.dir/rule:
@@ -1638,6 +1188,36 @@ _dobot_generate_messages_check_deps_GetEndEffectorParams/fast:
 .PHONY : _dobot_generate_messages_check_deps_GetEndEffectorParams/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetTRIGCmd: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetTRIGCmd/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetTRIGCmd.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetTRIGCmd/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/DobotServer.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotServer.dir/rule
+.PHONY : dobot/CMakeFiles/DobotServer.dir/rule
+
+# Convenience name for target.
+DobotServer: dobot/CMakeFiles/DobotServer.dir/rule
+
+.PHONY : DobotServer
+
+# fast build rule for target.
+DobotServer/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotServer.dir/build.make dobot/CMakeFiles/DobotServer.dir/build
+.PHONY : DobotServer/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdClear.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdClear.dir/rule
 .PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetQueuedCmdClear.dir/rule
@@ -1653,6 +1233,21 @@ _dobot_generate_messages_check_deps_SetQueuedCmdClear/fast:
 .PHONY : _dobot_generate_messages_check_deps_SetQueuedCmdClear/fast
 
 # Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetARCParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetARCParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetARCParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetARCParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetARCParams/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/rule
 .PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/rule
@@ -1666,6 +1261,141 @@ _dobot_generate_messages_check_deps_GetIOADC: dobot/CMakeFiles/_dobot_generate_m
 _dobot_generate_messages_check_deps_GetIOADC/fast:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetIOADC.dir/build
 .PHONY : _dobot_generate_messages_check_deps_GetIOADC/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_GetDeviceSN: dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_GetDeviceSN/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_GetDeviceSN.dir/build
+.PHONY : _dobot_generate_messages_check_deps_GetDeviceSN/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
+.PHONY : dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
+
+# Convenience name for target.
+_dobot_generate_messages_check_deps_SetJOGCommonParams: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/rule
+
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams
+
+# fast build rule for target.
+_dobot_generate_messages_check_deps_SetJOGCommonParams/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build.make dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/build
+.PHONY : _dobot_generate_messages_check_deps_SetJOGCommonParams/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_cpp: dobot/CMakeFiles/dobot_generate_messages_cpp.dir/rule
+
+.PHONY : dobot_generate_messages_cpp
+
+# fast build rule for target.
+dobot_generate_messages_cpp/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_cpp.dir/build
+.PHONY : dobot_generate_messages_cpp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_eus: dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
+
+.PHONY : dobot_generate_messages_eus
+
+# fast build rule for target.
+dobot_generate_messages_eus/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
+.PHONY : dobot_generate_messages_eus/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/DobotClient_JOG.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_JOG.dir/rule
+.PHONY : dobot/CMakeFiles/DobotClient_JOG.dir/rule
+
+# Convenience name for target.
+DobotClient_JOG: dobot/CMakeFiles/DobotClient_JOG.dir/rule
+
+.PHONY : DobotClient_JOG
+
+# fast build rule for target.
+DobotClient_JOG/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_JOG.dir/build.make dobot/CMakeFiles/DobotClient_JOG.dir/build
+.PHONY : DobotClient_JOG/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/DobotClient_PTP.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/DobotClient_PTP.dir/rule
+.PHONY : dobot/CMakeFiles/DobotClient_PTP.dir/rule
+
+# Convenience name for target.
+DobotClient_PTP: dobot/CMakeFiles/DobotClient_PTP.dir/rule
+
+.PHONY : DobotClient_PTP
+
+# fast build rule for target.
+DobotClient_PTP/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/DobotClient_PTP.dir/build.make dobot/CMakeFiles/DobotClient_PTP.dir/build
+.PHONY : DobotClient_PTP/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
+.PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dobot_generate_messages_lisp: dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule
+
+.PHONY : dobot_generate_messages_lisp
+
+# fast build rule for target.
+dobot_generate_messages_lisp/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
+.PHONY : dobot_generate_messages_lisp/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/PickAndPlac.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/PickAndPlac.dir/rule
+.PHONY : dobot/CMakeFiles/PickAndPlac.dir/rule
+
+# Convenience name for target.
+PickAndPlac: dobot/CMakeFiles/PickAndPlac.dir/rule
+
+.PHONY : PickAndPlac
+
+# fast build rule for target.
+PickAndPlac/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/PickAndPlac.dir/build.make dobot/CMakeFiles/PickAndPlac.dir/build
+.PHONY : PickAndPlac/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/KDL_ForwardKin2.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
+.PHONY : dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
+
+# Convenience name for target.
+KDL_ForwardKin2: dobot/CMakeFiles/KDL_ForwardKin2.dir/rule
+
+.PHONY : KDL_ForwardKin2
+
+# fast build rule for target.
+KDL_ForwardKin2/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/KDL_ForwardKin2.dir/build.make dobot/CMakeFiles/KDL_ForwardKin2.dir/build
+.PHONY : KDL_ForwardKin2/fast
 
 src/DobotClient_JOG.o: src/DobotClient_JOG.cpp.o
 
@@ -1883,6 +1613,60 @@ src/dobotInv.cpp.s:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/dobotInv.dir/build.make dobot/CMakeFiles/dobotInv.dir/src/dobotInv.cpp.s
 .PHONY : src/dobotInv.cpp.s
 
+src/marker_broker.o: src/marker_broker.cpp.o
+
+.PHONY : src/marker_broker.o
+
+# target to build an object file
+src/marker_broker.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_broker.dir/build.make dobot/CMakeFiles/marker_broker.dir/src/marker_broker.cpp.o
+.PHONY : src/marker_broker.cpp.o
+
+src/marker_broker.i: src/marker_broker.cpp.i
+
+.PHONY : src/marker_broker.i
+
+# target to preprocess a source file
+src/marker_broker.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_broker.dir/build.make dobot/CMakeFiles/marker_broker.dir/src/marker_broker.cpp.i
+.PHONY : src/marker_broker.cpp.i
+
+src/marker_broker.s: src/marker_broker.cpp.s
+
+.PHONY : src/marker_broker.s
+
+# target to generate assembly for a file
+src/marker_broker.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_broker.dir/build.make dobot/CMakeFiles/marker_broker.dir/src/marker_broker.cpp.s
+.PHONY : src/marker_broker.cpp.s
+
+src/marker_publisher.o: src/marker_publisher.cpp.o
+
+.PHONY : src/marker_publisher.o
+
+# target to build an object file
+src/marker_publisher.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/src/marker_publisher.cpp.o
+.PHONY : src/marker_publisher.cpp.o
+
+src/marker_publisher.i: src/marker_publisher.cpp.i
+
+.PHONY : src/marker_publisher.i
+
+# target to preprocess a source file
+src/marker_publisher.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/src/marker_publisher.cpp.i
+.PHONY : src/marker_publisher.cpp.i
+
+src/marker_publisher.s: src/marker_publisher.cpp.s
+
+.PHONY : src/marker_publisher.s
+
+# target to generate assembly for a file
+src/marker_publisher.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/src/marker_publisher.cpp.s
+.PHONY : src/marker_publisher.cpp.s
+
 src/poseFollow.o: src/poseFollow.cpp.o
 
 .PHONY : src/poseFollow.o
@@ -1918,111 +1702,93 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... marker_broker"
 	@echo "... dobotInv"
+	@echo "... marker_publisher"
 	@echo "... KDL_InverseKin"
-	@echo "... poseFollow"
-	@echo "... KDL_ForwardKin2"
-	@echo "... TowerBuilder"
-	@echo "... DobotClient_PTP"
-	@echo "... DobotClient_JOG"
-	@echo "... dobot_generate_messages_py"
-	@echo "... dobot_gennodejs"
-	@echo "... dobot_generate_messages_nodejs"
-	@echo "... dobot_genlisp"
-	@echo "... PickAndPlac"
-	@echo "... dobot_generate_messages_lisp"
-	@echo "... dobot_geneus"
+	@echo "... _dobot_generate_messages_check_deps_SetARCParams"
 	@echo "... install/local"
 	@echo "... dobot_gencpp"
-	@echo "... _dobot_generate_messages_check_deps_GetJOGCoordinateParams"
-	@echo "... _dobot_generate_messages_check_deps_GetDeviceSN"
-	@echo "... _dobot_generate_messages_check_deps_GetColorSensor"
-	@echo "... _dobot_generate_messages_check_deps_GetPTPJointParams"
+	@echo "... _dobot_generate_messages_check_deps_SetARCCmd"
+	@echo "... dobot_generate_messages_nodejs"
+	@echo "... _dobot_generate_messages_check_deps_SetHOMEParams"
+	@echo "... _dobot_generate_messages_check_deps_GetAlarmsState"
+	@echo "... _dobot_generate_messages_check_deps_GetCPParams"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPCoordinateParams"
 	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorGripper"
-	@echo "... _dobot_generate_messages_check_deps_SetDeviceName"
-	@echo "... DobotServer"
-	@echo "... _dobot_generate_messages_check_deps_SetTRIGCmd"
-	@echo "... _dobot_generate_messages_check_deps_SetColorSensor"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCmd"
 	@echo "... install"
 	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorLaser"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... _dobot_generate_messages_check_deps_SetPTPCmd"
-	@echo "... _dobot_generate_messages_check_deps_SetInfraredSensor"
-	@echo "... _dobot_generate_messages_check_deps_GetIOPWM"
-	@echo "... _dobot_generate_messages_check_deps_GetJOGCommonParams"
-	@echo "... dobot_generate_messages"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... _dobot_generate_messages_check_deps_SetIODO"
-	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStartExec"
-	@echo "... _dobot_generate_messages_check_deps_GetPTPCommonParams"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... _dobot_generate_messages_check_deps_SetCmdTimeout"
-	@echo "... _dobot_generate_messages_check_deps_GetHOMEParams"
-	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorLaser"
-	@echo "... _dobot_generate_messages_check_deps_SetHOMEParams"
-	@echo "... _dobot_generate_messages_check_deps_SetJOGCoordinateParams"
-	@echo "... dobot_genpy"
-	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorGripper"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... _dobot_generate_messages_check_deps_SetCPParams"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... _dobot_generate_messages_check_deps_SetJOGJointParams"
-	@echo "... _dobot_generate_messages_check_deps_SetPTPCoordinateParams"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... _dobot_generate_messages_check_deps_SetPTPCommonParams"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup"
-	@echo "... _dobot_generate_messages_check_deps_GetPose"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... edit_cache"
-	@echo "... dobot_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _dobot_generate_messages_check_deps_GetARCParams"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... _dobot_generate_messages_check_deps_GetPTPCoordinateParams"
-	@echo "... _dobot_generate_messages_check_deps_GetCPParams"
-	@echo "... _dobot_generate_messages_check_deps_GetIOMultiplexing"
-	@echo "... _dobot_generate_messages_check_deps_GetJOGJointParams"
-	@echo "... _dobot_generate_messages_check_deps_ClearAllAlarmsState"
-	@echo "... _dobot_generate_messages_check_deps_SetEMotor"
-	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup"
+	@echo "... _dobot_generate_messages_check_deps_SetColorSensor"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPJointParams"
 	@echo "... install/strip"
 	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorParams"
 	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdForceStopExec"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _dobot_generate_messages_check_deps_GetDeviceVersion"
-	@echo "... _dobot_generate_messages_check_deps_SetCPCmd"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... _dobot_generate_messages_check_deps_GetIODI"
-	@echo "... _dobot_generate_messages_check_deps_SetARCCmd"
-	@echo "... _dobot_generate_messages_check_deps_GetIODO"
+	@echo "... _dobot_generate_messages_check_deps_GetPose"
+	@echo "... _dobot_generate_messages_check_deps_SetEndEffectorSuctionCup"
+	@echo "... _dobot_generate_messages_check_deps_SetEMotor"
+	@echo "... _dobot_generate_messages_check_deps_ClearAllAlarmsState"
+	@echo "... _dobot_generate_messages_check_deps_GetIOMultiplexing"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGJointParams"
+	@echo "... dobot_gennodejs"
+	@echo "... _dobot_generate_messages_check_deps_GetIOPWM"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGCommonParams"
+	@echo "... dobot_genpy"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorGripper"
+	@echo "... _dobot_generate_messages_check_deps_GetHOMEParams"
+	@echo "... _dobot_generate_messages_check_deps_SetCmdTimeout"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorLaser"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPCommonParams"
+	@echo "... dobot_generate_messages"
+	@echo "... _dobot_generate_messages_check_deps_SetInfraredSensor"
 	@echo "... _dobot_generate_messages_check_deps_SetIOPWM"
-	@echo "... _dobot_generate_messages_check_deps_GetAlarmsState"
-	@echo "... _dobot_generate_messages_check_deps_SetPTPJointParams"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... _dobot_generate_messages_check_deps_SetARCParams"
+	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorSuctionCup"
+	@echo "... _dobot_generate_messages_check_deps_SetDeviceName"
+	@echo "... _dobot_generate_messages_check_deps_GetPTPJointParams"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGCoordinateParams"
+	@echo "... dobot_geneus"
+	@echo "... _dobot_generate_messages_check_deps_GetColorSensor"
+	@echo "... _dobot_generate_messages_check_deps_GetIODI"
+	@echo "... _dobot_generate_messages_check_deps_SetCPCmd"
+	@echo "... _dobot_generate_messages_check_deps_GetIODO"
+	@echo "... dobot_generate_messages_py"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCommonParams"
 	@echo "... _dobot_generate_messages_check_deps_GetDeviceName"
 	@echo "... _dobot_generate_messages_check_deps_GetPTPJumpParams"
 	@echo "... _dobot_generate_messages_check_deps_SetHOMECmd"
+	@echo "... poseFollow"
 	@echo "... _dobot_generate_messages_check_deps_GetInfraredSensor"
 	@echo "... _dobot_generate_messages_check_deps_SetIOMultiplexing"
+	@echo "... _dobot_generate_messages_check_deps_SetIODO"
+	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStartExec"
+	@echo "... _dobot_generate_messages_check_deps_SetCPParams"
+	@echo "... _dobot_generate_messages_check_deps_GetJOGCoordinateParams"
 	@echo "... _dobot_generate_messages_check_deps_SetJOGCmd"
+	@echo "... dobot_genlisp"
 	@echo "... _dobot_generate_messages_check_deps_SetWAITCmd"
 	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdStopExec"
-	@echo "... dobot_generate_messages_cpp"
-	@echo "... _dobot_generate_messages_check_deps_SetJOGCommonParams"
+	@echo "... list_install_components"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGJointParams"
+	@echo "... _dobot_generate_messages_check_deps_SetPTPCoordinateParams"
+	@echo "... TowerBuilder"
 	@echo "... _dobot_generate_messages_check_deps_SetPTPJumpParams"
 	@echo "... _dobot_generate_messages_check_deps_GetEndEffectorParams"
+	@echo "... _dobot_generate_messages_check_deps_SetTRIGCmd"
+	@echo "... DobotServer"
 	@echo "... _dobot_generate_messages_check_deps_SetQueuedCmdClear"
+	@echo "... _dobot_generate_messages_check_deps_GetARCParams"
 	@echo "... _dobot_generate_messages_check_deps_GetIOADC"
+	@echo "... _dobot_generate_messages_check_deps_GetDeviceSN"
+	@echo "... _dobot_generate_messages_check_deps_SetJOGCommonParams"
+	@echo "... dobot_generate_messages_cpp"
+	@echo "... edit_cache"
+	@echo "... dobot_generate_messages_eus"
+	@echo "... DobotClient_JOG"
+	@echo "... DobotClient_PTP"
+	@echo "... dobot_generate_messages_lisp"
+	@echo "... PickAndPlac"
+	@echo "... KDL_ForwardKin2"
 	@echo "... src/DobotClient_JOG.o"
 	@echo "... src/DobotClient_JOG.i"
 	@echo "... src/DobotClient_JOG.s"
@@ -2047,6 +1813,12 @@ help:
 	@echo "... src/dobotInv.o"
 	@echo "... src/dobotInv.i"
 	@echo "... src/dobotInv.s"
+	@echo "... src/marker_broker.o"
+	@echo "... src/marker_broker.i"
+	@echo "... src/marker_broker.s"
+	@echo "... src/marker_publisher.o"
+	@echo "... src/marker_publisher.i"
+	@echo "... src/marker_publisher.s"
 	@echo "... src/poseFollow.o"
 	@echo "... src/poseFollow.i"
 	@echo "... src/poseFollow.s"

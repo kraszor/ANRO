@@ -334,3 +334,7 @@ add_dependencies(dobotInv dobot_gencpp)
 add_executable(marker_publisher src/marker_publisher.cpp)
 target_link_libraries(marker_publisher ${catkin_LIBRARIES} DobotDll)
 add_dependencies(marker_publisher dobot_gencpp)
+
+add_executable(marker_broker src/marker_broker.cpp)
+target_link_libraries(marker_broker ${catkin_LIBRARIES} DobotDll)
+add_dependencies(marker_broker dobot_gencpp)

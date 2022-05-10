@@ -27,7 +27,7 @@ void callback(const geometry_msgs::PointStamped::ConstPtr& msg) {
     	double z = msg->point.z;
 	coordinates[0] = x;
 	coordinates[1] = y;
-	coordinates[2] = z;
+	coordinates[2] = -z;
 }
 int main( int argc, char** argv )
 {

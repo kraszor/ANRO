@@ -131,6 +131,10 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kgrela/dobot_ws/build/gtest/cmake_install.cmake")
+  include("/home/kgrela/dobot_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
+  include("/home/kgrela/dobot_ws/build/ar_track_alvar/ar_track_alvar_msgs/cmake_install.cmake")
+  include("/home/kgrela/dobot_ws/build/ar_track_alvar/ar_track_alvar/cmake_install.cmake")
+  include("/home/kgrela/dobot_ws/build/realsense-ros/realsense2_camera/cmake_install.cmake")
   include("/home/kgrela/dobot_ws/build/dobot/cmake_install.cmake")
 
 endif()

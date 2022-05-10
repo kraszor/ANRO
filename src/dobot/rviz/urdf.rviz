@@ -6,11 +6,13 @@ Panels:
       Expanded:
         - /Grid1
         - /TF1
+        - /TF1/Frames1
         - /Pose1
         - /PointStamped1
         - /Marker1
+        - /Image1
       Splitter Ratio: 0.5
-    Tree Height: 355
+    Tree Height: 204
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -29,7 +31,7 @@ Visualization Manager:
       Cell Size: 0.054999999701976776
       Class: rviz/Grid
       Color: 78; 154; 6
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -42,7 +44,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 8
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Alpha: 0.800000011920929
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -68,12 +70,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera:
+        camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_link:
+        camera_stick:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -100,19 +102,68 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        ar_marker_0:
+          Value: true
+        ar_marker_3:
+          Value: true
+        ar_marker_5:
+          Value: true
+        arm1:
+          Value: false
+        arm2:
+          Value: false
+        base_link:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        camera_stick:
+          Value: false
+        fourth:
+          Value: false
+        gripper:
+          Value: false
+        platform:
+          Value: false
       Marker Scale: 1
       Name: TF
-      Show Arrows: true
+      Show Arrows: false
       Show Axes: true
-      Show Names: true
+      Show Names: false
       Tree:
-        {}
+        base_link:
+          platform:
+            arm1:
+              arm2:
+                fourth:
+                  camera_stick:
+                    camera_link:
+                      camera_color_frame:
+                        camera_color_optical_frame:
+                          ar_marker_0:
+                            {}
+                          ar_marker_3:
+                            {}
+                          ar_marker_5:
+                            {}
+                      camera_depth_frame:
+                        camera_depth_optical_frame:
+                          {}
+                  gripper:
+                    {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Alpha: 1
       Axes Length: 1
       Axes Radius: 0.10000000149011612
@@ -140,12 +191,24 @@ Visualization Manager:
       Value: false
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /marker_publisher/visualization_marker
+      Marker Topic: /marker_broker/visualization_marker
       Name: Marker
       Namespaces:
         my_marker: true
         my_second_marker: true
       Queue Size: 100
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /camera/color/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -163,7 +226,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.7660055756568909
+      Distance: 1.205324649810791
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -178,22 +241,24 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.089998759329319
+      Pitch: 0.1349988877773285
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.8982752561569214
+      Yaw: 1.3382750749588013
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1145
+  Height: 1030
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001560000041ffc0200000003fb000000100044006900730070006c006100790073010000003d000001e6000000c900fffffffb0000000a00560069006500770073010000022900000138000000a400fffffffb0000001200530065006c0065006300740069006f006e0100000367000000f50000005c00ffffff000004a10000041f00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000156000003acfc0200000004fb000000100044006900730070006c006100790073010000003d0000014f000000c900fffffffb0000000a005600690065007700730100000192000000d7000000a400fffffffb0000001200530065006c0065006300740069006f006e010000026f000000a90000005c00fffffffb0000000a0049006d006100670065010000031e000000cb0000001600ffffff000004a1000003ac00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Views:
     collapsed: false
   Width: 1533
-  X: 67
-  Y: 27
+  X: 62
+  Y: 25
