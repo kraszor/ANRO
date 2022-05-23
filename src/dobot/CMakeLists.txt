@@ -338,3 +338,7 @@ add_dependencies(marker_publisher dobot_gencpp)
 add_executable(marker_broker src/marker_broker.cpp)
 target_link_libraries(marker_broker ${catkin_LIBRARIES} DobotDll)
 add_dependencies(marker_broker dobot_gencpp)
+
+add_executable(transport_sim src/transport_sim.cpp)
+target_link_libraries(transport_sim ${catkin_LIBRARIES} DobotDll)
+add_dependencies(transport_sim dobot_gencpp)

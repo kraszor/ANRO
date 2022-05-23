@@ -23,26 +23,26 @@ joint1_limits:
     - -1.571
     - 1.571
 joint1_velocity: 
-    - 320.0
+    - 5.585
 joint1_axis: 0 0 1
-effort: 100
+effort: 150
 joint2_limits:
     - 0.0
     - 1.571
 joint2_velocity: 
-    - 320.0
+    - 5.585
 joint2_axis: 0 1 0
 joint3_limits:
     - 0.5
     - 1.571
 joint3_velocity: 
-    - 320.0
+    - 5.585
 joint3_axis: 0 1 0
 joint4_limits:
     - -1.571
     - 1.571
 joint4_velocity: 
-    - 480.0
+    - 8.37758
 joint5_limits:
     - -1.571
     - 1.571
@@ -57,4 +57,4 @@ joint1_origins: 0 0 0.02515
 joint2_origins: 0 0 0.065
 joint3_origins: 0 0 0.135
 joint4_origins: 0.03 0.0 0.025
-
+camera_rpy: 0 -1.57 3.14
