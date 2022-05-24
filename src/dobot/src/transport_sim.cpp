@@ -251,7 +251,7 @@ while(ros::ok() && (abs(coordinates[0] - paper_coordinates [0]) > 0.005 ||
 }
 ros::Duration(0.5).sleep();
 // FAZA 4 opuszczenie
-while(ros::ok() && coordinates[2] > 0.01)
+while(ros::ok() && coordinates[2] > 0.016)
 {
     msg.header.stamp.sec = ros::Time::now().toSec();
     coordinates[2] -= 0.002;

@@ -106,25 +106,11 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        ar_marker_0:
-          Value: true
-        ar_marker_3:
-          Value: true
-        ar_marker_5:
-          Value: true
         arm1:
           Value: false
         arm2:
           Value: false
         base_link:
-          Value: false
-        camera_color_frame:
-          Value: false
-        camera_color_optical_frame:
-          Value: false
-        camera_depth_frame:
-          Value: false
-        camera_depth_optical_frame:
           Value: false
         camera_link:
           Value: false
@@ -149,17 +135,7 @@ Visualization Manager:
                 fourth:
                   camera_stick:
                     camera_link:
-                      camera_color_frame:
-                        camera_color_optical_frame:
-                          ar_marker_0:
-                            {}
-                          ar_marker_3:
-                            {}
-                          ar_marker_5:
-                            {}
-                      camera_depth_frame:
-                        camera_depth_optical_frame:
-                          {}
+                      {}
                   gripper:
                     {}
       Update Interval: 0
@@ -191,7 +167,7 @@ Visualization Manager:
       Value: false
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /marker_broker/visualization_marker
+      Marker Topic: /visualization_marker
       Name: Marker
       Namespaces:
         my_marker: true
@@ -241,10 +217,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.1349988877773285
+      Pitch: 0.06999854743480682
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.3382750749588013
+      Yaw: 2.7182772159576416
     Saved: ~
 Window Geometry:
   Displays:
@@ -260,5 +236,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1533
-  X: 62
+  X: 58
   Y: 25

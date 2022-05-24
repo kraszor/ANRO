@@ -297,12 +297,12 @@ clean: gtest/googlemock/CMakeFiles/gmock_main.dir/clean
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=87 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
@@ -353,7 +353,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMa
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
@@ -380,12 +380,12 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=89 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
@@ -739,7 +739,7 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_gennodejs.dir/
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_gennodejs.dir/rule
@@ -771,7 +771,7 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genlisp.dir/al
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genlisp.dir/rule
@@ -803,7 +803,7 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_geneus.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_geneus.dir/rule
@@ -932,12 +932,12 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messa
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/all: ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/_ar_track_alvar_msgs_generate_messages_check_deps_AlvarMarkers.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target ar_track_alvar_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=12 "Built target ar_track_alvar_msgs_generate_messages_lisp"
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_lisp.dir/rule
@@ -1001,7 +1001,7 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genpy.dir/all:
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_genpy.dir/rule
@@ -1031,12 +1031,12 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messa
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/all: ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/_ar_track_alvar_msgs_generate_messages_check_deps_AlvarMarkers.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target ar_track_alvar_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=13 "Built target ar_track_alvar_msgs_generate_messages_py"
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_py.dir/rule
@@ -1162,12 +1162,12 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messa
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/all: ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/_ar_track_alvar_msgs_generate_messages_check_deps_AlvarMarkers.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=13 "Built target ar_track_alvar_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target ar_track_alvar_msgs_generate_messages_nodejs"
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_nodejs.dir/rule
@@ -1462,12 +1462,12 @@ ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messa
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/all: ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/_ar_track_alvar_msgs_generate_messages_check_deps_AlvarMarkers.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=12 "Built target ar_track_alvar_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target ar_track_alvar_msgs_generate_messages_eus"
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_generate_messages_eus.dir/rule
@@ -2379,7 +2379,7 @@ ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/all: ar_track_alv
 ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/all: ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=100 "Built target trainMarkerBundle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target trainMarkerBundle"
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/all
 
 # Include target in all.
@@ -2389,7 +2389,7 @@ all: ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/all
 
 # Build rule for subdir invocation for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
@@ -4007,7 +4007,7 @@ ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/all: ar_t
 ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/all: ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=87 "Built target findMarkerBundlesNoKinect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=86 "Built target findMarkerBundlesNoKinect"
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/all
 
 # Include target in all.
@@ -4079,7 +4079,7 @@ ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/all: ar_track_alv
 ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/all: ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=90 "Built target individualMarkers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=89 "Built target individualMarkers"
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/all
 
 # Include target in all.
@@ -4276,7 +4276,7 @@ clean: ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.di
 ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/all: ar_track_alvar/ar_track_alvar_msgs/CMakeFiles/ar_track_alvar_msgs_gencpp.dir/all
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/depend
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=91 "Built target kinect_filtering"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=90 "Built target kinect_filtering"
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/all
 
 # Include target in all.
@@ -5605,7 +5605,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/all: realsense-
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/all: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=94 "Built target realsense2_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=93 "Built target realsense2_camera"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/all
 
 # Include target in all.
@@ -5711,7 +5711,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_e
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/all: realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=96 "Built target realsense2_camera_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=95 "Built target realsense2_camera_generate_messages_eus"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5821,7 +5821,7 @@ all: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messa
 
 # Build rule for subdir invocation for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/rule
@@ -5853,7 +5853,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_n
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/all: realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=98 "Built target realsense2_camera_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=97 "Built target realsense2_camera_generate_messages_nodejs"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5954,7 +5954,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_l
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/all: realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=97 "Built target realsense2_camera_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=96 "Built target realsense2_camera_generate_messages_lisp"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6151,7 +6151,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_genpy.dir/all: real
 
 # Build rule for subdir invocation for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_genpy.dir/rule
@@ -6247,12 +6247,12 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_p
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/all: realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=99 "Built target realsense2_camera_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=98,99 "Built target realsense2_camera_generate_messages_py"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_py.dir/rule
@@ -6444,7 +6444,7 @@ realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_c
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/all: realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/all
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/depend
 	$(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=95 "Built target realsense2_camera_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=94 "Built target realsense2_camera_generate_messages_cpp"
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6473,6 +6473,8 @@ clean: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_mes
 # Directory level rules for directory dobot
 
 # Convenience name for "all" pass in the directory.
+dobot/all: dobot/CMakeFiles/pick_place_cam.dir/all
+dobot/all: dobot/CMakeFiles/transport_sim.dir/all
 dobot/all: dobot/CMakeFiles/marker_broker.dir/all
 dobot/all: dobot/CMakeFiles/dobotInv.dir/all
 dobot/all: dobot/CMakeFiles/marker_publisher.dir/all
@@ -6489,6 +6491,8 @@ dobot/all: dobot/CMakeFiles/KDL_ForwardKin2.dir/all
 .PHONY : dobot/all
 
 # Convenience name for "clean" pass in the directory.
+dobot/clean: dobot/CMakeFiles/pick_place_cam.dir/clean
+dobot/clean: dobot/CMakeFiles/transport_sim.dir/clean
 dobot/clean: dobot/CMakeFiles/marker_broker.dir/clean
 dobot/clean: dobot/CMakeFiles/dobotInv.dir/clean
 dobot/clean: dobot/CMakeFiles/marker_publisher.dir/clean
@@ -6580,6 +6584,80 @@ dobot/preinstall:
 .PHONY : dobot/preinstall
 
 #=============================================================================
+# Target rules for target dobot/CMakeFiles/pick_place_cam.dir
+
+# All Build rule for target.
+dobot/CMakeFiles/pick_place_cam.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
+	$(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/depend
+	$(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=92 "Built target pick_place_cam"
+.PHONY : dobot/CMakeFiles/pick_place_cam.dir/all
+
+# Include target in all.
+all: dobot/CMakeFiles/pick_place_cam.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+dobot/CMakeFiles/pick_place_cam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/pick_place_cam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+.PHONY : dobot/CMakeFiles/pick_place_cam.dir/rule
+
+# Convenience name for target.
+pick_place_cam: dobot/CMakeFiles/pick_place_cam.dir/rule
+
+.PHONY : pick_place_cam
+
+# clean rule for target.
+dobot/CMakeFiles/pick_place_cam.dir/clean:
+	$(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/clean
+.PHONY : dobot/CMakeFiles/pick_place_cam.dir/clean
+
+# clean rule for target.
+clean: dobot/CMakeFiles/pick_place_cam.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target dobot/CMakeFiles/transport_sim.dir
+
+# All Build rule for target.
+dobot/CMakeFiles/transport_sim.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
+	$(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/depend
+	$(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=100 "Built target transport_sim"
+.PHONY : dobot/CMakeFiles/transport_sim.dir/all
+
+# Include target in all.
+all: dobot/CMakeFiles/transport_sim.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+dobot/CMakeFiles/transport_sim.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/transport_sim.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
+.PHONY : dobot/CMakeFiles/transport_sim.dir/rule
+
+# Convenience name for target.
+transport_sim: dobot/CMakeFiles/transport_sim.dir/rule
+
+.PHONY : transport_sim
+
+# clean rule for target.
+dobot/CMakeFiles/transport_sim.dir/clean:
+	$(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/clean
+.PHONY : dobot/CMakeFiles/transport_sim.dir/clean
+
+# clean rule for target.
+clean: dobot/CMakeFiles/transport_sim.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target dobot/CMakeFiles/marker_broker.dir
 
 # All Build rule for target.
@@ -6660,7 +6738,7 @@ clean: dobot/CMakeFiles/dobotInv.dir/clean
 dobot/CMakeFiles/marker_publisher.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=92 "Built target marker_publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=91 "Built target marker_publisher"
 .PHONY : dobot/CMakeFiles/marker_publisher.dir/all
 
 # Include target in all.
@@ -7599,7 +7677,7 @@ dobot/CMakeFiles/dobot_genpy.dir/all: dobot/CMakeFiles/dobot_generate_messages_p
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_genpy.dir/rule
@@ -7800,7 +7878,7 @@ all: dobot/CMakeFiles/dobot_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 72
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 71
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages.dir/rule
@@ -8024,7 +8102,7 @@ dobot/CMakeFiles/dobot_geneus.dir/all: dobot/CMakeFiles/dobot_generate_messages_
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_geneus.dir/rule
@@ -8239,12 +8317,12 @@ dobot/CMakeFiles/dobot_generate_messages_py.dir/all: dobot/CMakeFiles/_dobot_gen
 dobot/CMakeFiles/dobot_generate_messages_py.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_py.dir/build.make dobot/CMakeFiles/dobot_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82,83,84,85,86 "Built target dobot_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82,83,84,85 "Built target dobot_generate_messages_py"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_py.dir/rule
@@ -8399,7 +8477,7 @@ clean: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetHOMECmd.dir/clean
 dobot/CMakeFiles/poseFollow.dir/all: dobot/CMakeFiles/dobot_gencpp.dir/all
 	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=93 "Built target poseFollow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num= "Built target poseFollow"
 .PHONY : dobot/CMakeFiles/poseFollow.dir/all
 
 # Include target in all.
@@ -8409,7 +8487,7 @@ all: dobot/CMakeFiles/poseFollow.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/poseFollow.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/poseFollow.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/poseFollow.dir/rule
@@ -8665,7 +8743,7 @@ dobot/CMakeFiles/dobot_genlisp.dir/all: dobot/CMakeFiles/dobot_generate_messages
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_genlisp.dir/rule
@@ -9302,12 +9380,12 @@ dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/_dobot_ge
 dobot/CMakeFiles/dobot_generate_messages_eus.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_eus.dir/build.make dobot/CMakeFiles/dobot_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43 "Built target dobot_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target dobot_generate_messages_eus"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_eus.dir/rule
@@ -9468,12 +9546,12 @@ dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all: dobot/CMakeFiles/_dobot_g
 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all: dobot/CMakeFiles/_dobot_generate_messages_check_deps_SetJOGCommonParams.dir/all
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/depend
 	$(MAKE) -f dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build.make dobot/CMakeFiles/dobot_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target dobot_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kgrela/dobot_ws/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target dobot_generate_messages_lisp"
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/dobot_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kgrela/dobot_ws/build/CMakeFiles 0
 .PHONY : dobot/CMakeFiles/dobot_generate_messages_lisp.dir/rule

@@ -553,6 +553,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_Extrinsics.dir/DependInfo.cmake"
   "realsense-ros/realsense2_camera/CMakeFiles/_realsense2_camera_generate_messages_check_deps_DeviceInfo.dir/DependInfo.cmake"
   "realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/DependInfo.cmake"
+  "dobot/CMakeFiles/pick_place_cam.dir/DependInfo.cmake"
+  "dobot/CMakeFiles/transport_sim.dir/DependInfo.cmake"
   "dobot/CMakeFiles/marker_broker.dir/DependInfo.cmake"
   "dobot/CMakeFiles/dobotInv.dir/DependInfo.cmake"
   "dobot/CMakeFiles/marker_publisher.dir/DependInfo.cmake"

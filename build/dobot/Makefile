@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+dobot/CMakeFiles/pick_place_cam.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/pick_place_cam.dir/rule
+.PHONY : dobot/CMakeFiles/pick_place_cam.dir/rule
+
+# Convenience name for target.
+pick_place_cam: dobot/CMakeFiles/pick_place_cam.dir/rule
+
+.PHONY : pick_place_cam
+
+# fast build rule for target.
+pick_place_cam/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/build
+.PHONY : pick_place_cam/fast
+
+# Convenience name for target.
+dobot/CMakeFiles/transport_sim.dir/rule:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/transport_sim.dir/rule
+.PHONY : dobot/CMakeFiles/transport_sim.dir/rule
+
+# Convenience name for target.
+transport_sim: dobot/CMakeFiles/transport_sim.dir/rule
+
+.PHONY : transport_sim
+
+# fast build rule for target.
+transport_sim/fast:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/build
+.PHONY : transport_sim/fast
+
+# Convenience name for target.
 dobot/CMakeFiles/marker_broker.dir/rule:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dobot/CMakeFiles/marker_broker.dir/rule
 .PHONY : dobot/CMakeFiles/marker_broker.dir/rule
@@ -1667,6 +1697,33 @@ src/marker_publisher.cpp.s:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/marker_publisher.dir/build.make dobot/CMakeFiles/marker_publisher.dir/src/marker_publisher.cpp.s
 .PHONY : src/marker_publisher.cpp.s
 
+src/pick_place_cam.o: src/pick_place_cam.cpp.o
+
+.PHONY : src/pick_place_cam.o
+
+# target to build an object file
+src/pick_place_cam.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/src/pick_place_cam.cpp.o
+.PHONY : src/pick_place_cam.cpp.o
+
+src/pick_place_cam.i: src/pick_place_cam.cpp.i
+
+.PHONY : src/pick_place_cam.i
+
+# target to preprocess a source file
+src/pick_place_cam.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/src/pick_place_cam.cpp.i
+.PHONY : src/pick_place_cam.cpp.i
+
+src/pick_place_cam.s: src/pick_place_cam.cpp.s
+
+.PHONY : src/pick_place_cam.s
+
+# target to generate assembly for a file
+src/pick_place_cam.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/src/pick_place_cam.cpp.s
+.PHONY : src/pick_place_cam.cpp.s
+
 src/poseFollow.o: src/poseFollow.cpp.o
 
 .PHONY : src/poseFollow.o
@@ -1694,6 +1751,33 @@ src/poseFollow.cpp.s:
 	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/poseFollow.dir/build.make dobot/CMakeFiles/poseFollow.dir/src/poseFollow.cpp.s
 .PHONY : src/poseFollow.cpp.s
 
+src/transport_sim.o: src/transport_sim.cpp.o
+
+.PHONY : src/transport_sim.o
+
+# target to build an object file
+src/transport_sim.cpp.o:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/src/transport_sim.cpp.o
+.PHONY : src/transport_sim.cpp.o
+
+src/transport_sim.i: src/transport_sim.cpp.i
+
+.PHONY : src/transport_sim.i
+
+# target to preprocess a source file
+src/transport_sim.cpp.i:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/src/transport_sim.cpp.i
+.PHONY : src/transport_sim.cpp.i
+
+src/transport_sim.s: src/transport_sim.cpp.s
+
+.PHONY : src/transport_sim.s
+
+# target to generate assembly for a file
+src/transport_sim.cpp.s:
+	cd /home/kgrela/dobot_ws/build && $(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/src/transport_sim.cpp.s
+.PHONY : src/transport_sim.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1702,6 +1786,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... pick_place_cam"
+	@echo "... transport_sim"
 	@echo "... marker_broker"
 	@echo "... dobotInv"
 	@echo "... marker_publisher"
@@ -1819,9 +1905,15 @@ help:
 	@echo "... src/marker_publisher.o"
 	@echo "... src/marker_publisher.i"
 	@echo "... src/marker_publisher.s"
+	@echo "... src/pick_place_cam.o"
+	@echo "... src/pick_place_cam.i"
+	@echo "... src/pick_place_cam.s"
 	@echo "... src/poseFollow.o"
 	@echo "... src/poseFollow.i"
 	@echo "... src/poseFollow.s"
+	@echo "... src/transport_sim.o"
+	@echo "... src/transport_sim.i"
+	@echo "... src/transport_sim.s"
 .PHONY : help
 
 

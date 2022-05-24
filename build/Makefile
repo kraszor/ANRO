@@ -2547,6 +2547,32 @@ realsense2_camera_generate_messages_cpp/fast:
 .PHONY : realsense2_camera_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named pick_place_cam
+
+# Build rule for target.
+pick_place_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pick_place_cam
+.PHONY : pick_place_cam
+
+# fast build rule for target.
+pick_place_cam/fast:
+	$(MAKE) -f dobot/CMakeFiles/pick_place_cam.dir/build.make dobot/CMakeFiles/pick_place_cam.dir/build
+.PHONY : pick_place_cam/fast
+
+#=============================================================================
+# Target rules for targets named transport_sim
+
+# Build rule for target.
+transport_sim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 transport_sim
+.PHONY : transport_sim
+
+# fast build rule for target.
+transport_sim/fast:
+	$(MAKE) -f dobot/CMakeFiles/transport_sim.dir/build.make dobot/CMakeFiles/transport_sim.dir/build
+.PHONY : transport_sim/fast
+
+#=============================================================================
 # Target rules for targets named marker_broker
 
 # Build rule for target.
@@ -3808,6 +3834,8 @@ help:
 	@echo "... _realsense2_camera_generate_messages_check_deps_Extrinsics"
 	@echo "... _realsense2_camera_generate_messages_check_deps_DeviceInfo"
 	@echo "... realsense2_camera_generate_messages_cpp"
+	@echo "... pick_place_cam"
+	@echo "... transport_sim"
 	@echo "... marker_broker"
 	@echo "... dobotInv"
 	@echo "... marker_publisher"

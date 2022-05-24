@@ -239,6 +239,8 @@
 /home/kgrela/dobot_ws/build/realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/rebuild_cache.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/test.dir
+/home/kgrela/dobot_ws/build/dobot/CMakeFiles/pick_place_cam.dir
+/home/kgrela/dobot_ws/build/dobot/CMakeFiles/transport_sim.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/marker_broker.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/dobotInv.dir
 /home/kgrela/dobot_ws/build/dobot/CMakeFiles/marker_publisher.dir

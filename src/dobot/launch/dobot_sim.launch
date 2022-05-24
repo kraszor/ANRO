@@ -5,10 +5,10 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> 
   <param name ="cube_x" value="-0.15" />
   <param name ="cube_y" value="-0.15" />
-  <param name ="cube_orientation" value="-1" />
+  <param name ="cube_orientation" value="0.5" />
   <param name ="paper_x" value="-0.2" />
   <param name ="paper_y" value="0.05" />
-  <param name ="paper_orientation" value="1" />
+  <param name ="paper_orientation" value="0.6" />
   <node name="transport_sim" pkg="dobot" type="transport_sim" output="screen"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dobot)/rviz/urdf.rviz" required="true" />
 </launch>

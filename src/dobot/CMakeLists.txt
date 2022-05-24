@@ -342,3 +342,7 @@ add_dependencies(marker_broker dobot_gencpp)
 add_executable(transport_sim src/transport_sim.cpp)
 target_link_libraries(transport_sim ${catkin_LIBRARIES} DobotDll)
 add_dependencies(transport_sim dobot_gencpp)
+
+add_executable(pick_place_cam src/pick_place_cam.cpp)
+target_link_libraries(pick_place_cam ${catkin_LIBRARIES} DobotDll)
+add_dependencies(pick_place_cam dobot_gencpp)
